@@ -1,0 +1,121 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 10vh;
+    background-color: #5484f4;
+}
+
+    header .sun {
+        width: 3em;
+        height: 3em;
+        background-color: yellow;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        float: right;
+        margin: 5px 5px 0 0;
+    }
+
+main {
+    height: 80vh;
+    background-color: #5484f4;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.house {
+    border: 1px solid #fff;
+    width: 18%;
+    display: flex;
+}
+
+    .house.house-noelevator {
+        height: 200px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .house .house_window {
+        border: 1px solid #fff;
+        width: 30px;
+        height: 30px;
+    }
+
+    .house.house-withelevator {
+        height: 480px;
+        width: 34%;
+    }
+
+    .house .house_left, .house .house_mine, .house .house_right {
+        height: 100%;
+        flex: 1;
+    }
+
+    .house .house_left, .house .house_right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .house .house_flat {
+        flex: 1;
+        border: 1px solid #fff;
+        position: relative;
+    }
+
+    .house .house_flat:hover {
+        background-color: rgba(241, 232, 146, 0.43);
+    }
+
+    .house .house_mine {
+        position: relative;
+    }
+
+    .house .house_elevator {
+        border: 1px solid #fff744;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% / 6 - 2px);
+        background-color: rgba(240, 248, 255, 0.33);
+    }
+
+    .house .house_light {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        margin-left: -5px;
+        border: 1px solid #a88604;
+        border-radius: 50%;
+    }
+
+    .house .house_light.on {
+        background-color: #fff744;
+    }
+
+    .house .person {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        width: 20px;
+        height: 40px;
+        margin-left: -10px;
+        overflow: hidden;
+    }
+
+        .house .person img {
+            width: auto;
+            height: 100%;
+            margin-left: -50%;
+        }
+
+footer {
+    height: 10vh;
+    background-color: green;
+}
