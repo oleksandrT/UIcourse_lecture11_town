@@ -17,12 +17,20 @@ function Person(floor) {
 function House(el) {
     this.flats = el.querySelectorAll(".house_flat");
 
+    var floor;
+
     el.addEventListener("click", function (e) {
-        addPerson(e);
+        var target = e.target;
+        floor = target.getAttribute("data-floor");
+        addPerson(target);
     });
 
-    function addPerson(e) {
-        var target = e.target;
+    function addPerson(target) {
+        addPersonElement(target);
+        var man = new Person();
+    }
+
+    function addPersonElement(target) {
         if (target.className == "house_flat") {
             var imgEl = document.createElement("img");
             imgEl.setAttribute("src", "images/man.svg");
@@ -35,14 +43,39 @@ function House(el) {
 }
 
 function Elevator(el) {
-    this.atFloor;
-    this.light;
+    var atFloor, light;
+    var elem = el,
+        lightElem = elem.querySelector(".house_light");
 
-    var elem = el;
+    this.getFloor = function() {
+        return atFloor;
+    };
+
+    this.setFloor = function (value) {
+        atFloor = value;
+    };
+
+    this.turnOnLight = function () {
+        light = "on";
+        lightElem.className = "house_light on";
+    };
+
+    this.turnOffLight = function () {
+        light = "off";
+        lightElem.className = "house_light on";
+    };
+
+    this.uploadPerson = function () {
+
+    };
+
+    this.offloadPerson = function () {
+
+    };
 
     function init() {
-        this.atFloor = 1;
-        this.light = false;
+        atFloor = 1;
+        light = "off";
     }
     init();
 }
