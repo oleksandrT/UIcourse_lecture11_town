@@ -1,4 +1,4 @@
-# Web UI course. Lecture11 homework. THe town.
+# Web UI course. Lecture 11's homework. The town.
 
 This is implementation of house as an object.
 Inside flat you can add people by clicking on it. 
