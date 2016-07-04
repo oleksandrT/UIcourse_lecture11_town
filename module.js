@@ -38,8 +38,6 @@
         _renderElevator.call(this, parent);
     }
 
-    // Public methods
-
 
     // Private methods
     function _initHouse() {
