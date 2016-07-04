@@ -82,6 +82,7 @@ main {
         width: 100%;
         height: calc(100% / 6 - 2px);
         background-color: rgba(240, 248, 255, 0.33);
+        transition: bottom 1s 0.3s ease;
     }
 
     .house .house_light {
@@ -113,6 +114,11 @@ main {
             width: auto;
             height: 100%;
             margin-left: -50%;
+        }
+
+        .house .person:hover img {
+            -webkit-filter: saturate(400);
+            filter: saturate(400);
         }
 
 footer {
