@@ -30,7 +30,7 @@
         var initRoom = this.element.querySelector(".house_right").querySelectorAll(".house_flat")[this.floors - 2];
         var person = new Person(2, initRoom);
 
-        _addEventListeners.call(this);
+        _addEventListener.call(this);
     }
 
     function _renderHouse() {
@@ -72,7 +72,7 @@
         this.element.appendChild(docFrag);
     }
 
-    function _addEventListeners() {
+    function _addEventListener() {
         this.element.addEventListener("click", function (e) {
             var target = e.target;
             if (target.className == "house_flat") {
